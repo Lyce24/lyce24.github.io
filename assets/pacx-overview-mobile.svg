@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="640" viewBox="0 0 440 640" role="img" aria-labelledby="title desc">
+  <title id="title">PaCX-MAE training and inference</title>
+  <desc id="desc">A simplified architecture overview. During training, chest X-ray, ECG and laboratory inputs support cross-modal distillation to train PaCX-MAE. At inference, only a chest X-ray is needed: the CXR encoder supports prediction and segmentation. Icons are schematic, not medical images.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#806c62"/></marker>
+    <g id="xray" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><rect x="-31" y="-35" width="62" height="70" rx="5"/><path d="M0-22V20M-5-15C-18-22-24-8-22 8S-7 24-5 13ZM5-15C18-22 24-8 22 8S7 24 5 13Z"/></g>
+  </defs>
+  <rect width="440" height="640" fill="#fff"/>
+  <rect x="14" y="14" width="412" height="320" rx="8" fill="#f7f5f2"/>
+  <rect x="14" y="350" width="412" height="276" rx="8" fill="#f7f5f2"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#30211a">
+    <text x="30" y="48" font-family="Georgia, serif" font-size="26">During training</text>
+    <g fill="#fff" stroke="#d8cec8" stroke-width="1.5">
+      <rect x="30" y="68" width="116" height="116" rx="6"/>
+      <rect x="162" y="68" width="116" height="116" rx="6"/>
+      <rect x="294" y="68" width="116" height="116" rx="6"/>
+    </g>
+    <use href="#xray" transform="translate(88 112) scale(.7)" color="#4e3629"/>
+    <path d="M176 114H192L200 98L209 133L219 86L230 123L240 114H264" fill="none" stroke="#b80d15" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="none" stroke="#4e3629" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M335 86H369M342 86V112L329 135Q326 142 334 142H371Q379 142 375 135L362 112V86M337 125H368"/>
+      <path d="M345 133H361"/>
+    </g>
+    <text x="88" y="166" text-anchor="middle" font-size="20">Chest X-ray</text>
+    <text x="220" y="166" text-anchor="middle" font-size="22">ECG</text>
+    <text x="352" y="166" text-anchor="middle" font-size="22">Labs</text>
+    <g fill="none" stroke="#806c62" stroke-width="2.4" stroke-linejoin="round">
+      <path d="M88 184V207H352V184"/>
+      <path d="M220 184V230" marker-end="url(#arrow)"/>
+    </g>
+    <rect x="60" y="236" width="320" height="76" rx="6" fill="#4e3629"/>
+    <text x="220" y="267" text-anchor="middle" font-size="24" fill="#fff">PaCX-MAE</text>
+    <text x="220" y="295" text-anchor="middle" font-size="20" fill="#f1dfd1">Cross-modal distillation</text>
+    <text x="30" y="384" font-family="Georgia, serif" font-size="26">At inference</text>
+    <rect x="60" y="402" width="320" height="58" rx="6" fill="#fff" stroke="#d8cec8" stroke-width="1.5"/>
+    <use href="#xray" transform="translate(93 431) scale(.5)" color="#4e3629"/>
+    <text x="240" y="438" text-anchor="middle" font-size="22">Chest X-ray only</text>
+    <path d="M220 464V481" fill="none" stroke="#806c62" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <rect x="60" y="488" width="320" height="48" rx="6" fill="#4e3629"/>
+    <text x="220" y="519" text-anchor="middle" font-size="22" fill="#fff">CXR encoder</text>
+    <path d="M220 540V559" fill="none" stroke="#806c62" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <rect x="60" y="566" width="320" height="44" rx="6" fill="#fff" stroke="#d8cec8" stroke-width="1.5"/>
+    <text x="220" y="595" text-anchor="middle" font-size="22">Predict / segment</text>
+  </g>
+</svg>
